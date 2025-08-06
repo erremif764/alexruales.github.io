@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alex Ruales Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Snake Intro Screen -->
+  <div id="snakeScreen">
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div class="snake-controls">
+      <button id="skipBtn">Go to Site</button>
+    </div>
+  </div>
+
+  <!-- Main Portfolio -->
+  <div id="main" class="hidden">
+    <nav class="nav">
+      <a data-target="about" class="active">About Me</a>
+      <a data-target="projects">Projects</a>
+      <a data-target="skills">Skills</a>
+      <a data-target="contact">Contact</a>
+    </nav>
+
+    <section id="about" class="section active">
+      <h1>About Me</h1>
+      <p>
+        Alex dreamed of becoming a soccer player but ended up playing on a different field: creativity.<br />
+        With over 10 years of experience as a creative copywriter in agencies like FCB &amp; FiRe and Mullen Lowe, he has developed campaigns for global brands such as Coca-Cola, Reebok, and Clorox, as well as a wide range of local and regional names like KFC, Netlife, Juan Valdez, Citroën, DS Automobiles, Banco Internacional, Fybeca, and Hino.<br />
+        His work has been recognized and featured in publications like Lürzer’s Archive, Ads of the World, Best Ads on TV, El Ojo de Iberoamérica, El Cóndor Ecuador, and Forbes. He didn’t become the next Zizou, but he found his way to compete through ideas always with energy, commitment, and a constant passion for tackling new creative challenges.
+      </p>
+    </section>
+
+    <section id="projects" class="section">
+      <h1>Projects</h1>
+      <div id="behanceFeed" class="behance-feed">
+        <!-- Behance projects will load here -->
+      </div>
+      <p><a href="https://www.behance.net/aruales7640" target="_blank" class="behance-link">See all projects on Behance →</a></p>
+    </section>
+
+    <section id="skills" class="section">
+      <h1>Skills</h1>
+      <ul>
+        <li>10+ years as Creative Copywriter</li>
+        <li>Concept creation, campaigns, naming, storytelling, direction</li>
+        <li>Global &amp; regional brands</li>
+        <li>Recognized in Lürzer’s Archive, Ads of the World, Forbes, etc.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h1>Contact</h1>
+      <p>Email: <a href="mailto:alexruales7640@gmail.com">alexruales7640@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/alexruales" target="_blank">linkedin.com/in/alexruales</a></p>
+      <p>Behance: <a href="https://www.behance.net/aruales7640" target="_blank">behance.net/aruales7640</a></p>
+    </section>
+  </div>
+
+  <script src="snake.js"></script>
+  <script src="nav.js"></script>
+  <script src="behance.js"></script>
+</body>
+</html>

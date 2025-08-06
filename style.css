@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+  color: #d1f99d; /* lime green accent */
+  overflow-x: hidden;
+}
+
+a {
+  color: #a6d32d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+#snakeScreen {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#gameCanvas {
+  background: #000;
+  border: 3px solid #a6d32d;
+  border-radius: 12px;
+}
+
+.snake-controls {
+  margin-top: 15px;
+}
+
+button#skipBtn {
+  background-color: #a6d32d;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #121212;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button#skipBtn:hover {
+  background-color: #8bc20f;
+}
+
+#main {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.nav {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #a6d32d;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.nav a.active,
+.nav a:hover {
+  border-bottom: 2px solid #a6d32d;
+}
+
+.section {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.section.active {
+  display: block;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.behance-feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.behance-feed a {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #d1f99d;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.behance-feed a:hover {
+  transform: scale(1.05);
+  background: #a6d32d;
+  color: black;
+}
+
+.behance-feed img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.behance-link {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #a6d32d;
+  text-align: right;
+  display: block;
+  margin-top: -10px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  #gameCanvas {
+    width: 90vw !important;
+    height: 90vw !important;
+  }
+  .behance-feed {
+    grid-template-columns: 1fr;
+  }
+}
